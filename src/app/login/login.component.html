@@ -1,1 +1,21 @@
-<h1>Heyz</h1>
+<div class="ui-g-12 ui-g-nopad">
+  <div class="ui-g-4" style="height:100%"></div>
+  <p-card class="ui-g-4">
+    <p-header>
+     Login 
+    </p-header>
+    
+        <input type="text" pInputText [(ngModel)]="emailid" placeholder="Enter Emailid">
+        <br>
+        <input type="password" pInputText [(ngModel)]="password" placeholder="Enter password">
+        <br>
+        <br>
+        <button pButton type="button" label="Login " class="ui-button-raised" (click)="login()"> </button>
+    <p-footer>
+      
+    </p-footer>
+
+  </p-card>
+  <div class="ui-g-4" style="height:100%"></div>
+
+</div>
