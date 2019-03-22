@@ -1,3 +1,5 @@
 <app-top-profile-bar *ngIf="authservice.user | async" class="ui-g-12 ui-g-nopad"></app-top-profile-bar>
 <app-side-nav-bar *ngIf="authservice.user | async" class="ui-g-2 ui-g-nopad"></app-side-nav-bar>
-<router-outlet (activate)="onActivate($event)" class="ui-g-10 ui-g-nopad"></router-outlet>
+<div class="ui-g-10 ui-g-nopad">
+<router-outlet (activate)="onActivate($event)" ></router-outlet>
+</div>
