@@ -3,3 +3,18 @@ html,body {
     height: 100%;
     
 }
+ #addvotercard .ui-menu .ui-menuitem {
+    margin: 10px;
+    padding: 10px;
+    border: 1px white solid;
+}
+#addvotercard .ui-menuitem-text {
+    color: white !important;
+}
+#addvotercard .ui-menuitem-icon {
+    color: white !important;
+}
+#addvotercard .ui-menu {
+    width: 100% !important;
+    background: darkslategrey;
+}
