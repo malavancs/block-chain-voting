@@ -1,0 +1,38 @@
+<div class="ui-g-12 ui-g-nopad">
+  <div class="card">
+    <p class="title1"> Get Candidates list</p>
+    <div class="container">
+
+      <div class="ui-g ui-fluid">
+
+        <div class="ui-g-8 ui-md-8">
+          <div>
+            <div class="electino">Select election get Candidate list</div>
+            <p-dropdown [options]="electionList" [(ngModel)]="selectedElection"></p-dropdown>
+          </div>
+        </div>
+        <div class="ui-g-12">
+
+          <div *ngFor="let i of a" class="ui-g-3 ui-g-nopad single-card">
+            <div class="ui-g-12">
+              <img [src]="i.image_url" class="pic">
+            </div>
+            <div class="ui-g-12 ui-g-nopad">
+              <p class="candi-name">{{i.name}}</p>
+            </div>
+            <hr style="margin: 20px;">
+            <div class="ui-g-12 desc"> {{i.description}} </div>
+            <div class="ui-g-12 ui-g-nopad sompad"> 
+                <button pButton type="button" label="Edit Details" class="ui-button-raised"></button>
+               
+            </div>
+            <div class="ui-g-12 ui-g-nopad sompad"> 
+            <button pButton type="button" label="Delete him" class="ui-button-raised ui-button-secondary"></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
