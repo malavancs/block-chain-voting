@@ -11,7 +11,8 @@ export const environment = {
     projectId: 'block-chain-94f3d',
     storageBucket: 'block-chain-94f3d.appspot.com',
     messagingSenderId: '615638146047'
-  }
+  },
+  api_url : 'http://localhost:3000'
 };
 
 /*

@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MenuItem} from 'primeng/api';
 import { AddVoterComponent } from './registration/add-voter/add-voter.component';
 import {PanelMenuModule} from 'primeng/panelmenu';
+import {DropdownModule} from 'primeng/dropdown';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,9 +33,11 @@ import {PanelMenuModule} from 'primeng/panelmenu';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CardModule,
+    DropdownModule,
     MenuModule,
     ButtonModule,
     InputTextModule,
