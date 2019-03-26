@@ -22,6 +22,8 @@ import { AddVoterComponent } from './registration/add-voter/add-voter.component'
 import {PanelMenuModule} from 'primeng/panelmenu';
 import {DropdownModule} from 'primeng/dropdown';
 import { HttpClientModule } from '@angular/common/http';
+import { AddCandidateComponent } from './registration/add-candidate/add-candidate.component';
+import { CandidateListComponent } from './registration/candidate-list/candidate-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     SideNavBarComponent,
     TopProfileBarComponent,
     MainComponent,
-    AddVoterComponent
+    AddVoterComponent,
+    AddCandidateComponent,
+    CandidateListComponent
   ],
   imports: [
     BrowserModule,
