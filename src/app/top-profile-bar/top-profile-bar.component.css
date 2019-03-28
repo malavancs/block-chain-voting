@@ -1,4 +1,28 @@
 .height-css{
     height: 80px;
-    background: red;
+    background-image: linear-gradient(2deg,#5c2774, #335cc5, #637ffd);
+}
+.height-css1{
+    height: 80px;
+    padding: 15px;
+}
+.pic {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+  }
+.text {
+    margin-top: 14px;
+    color: white;
+}
+.imghey{
+    text-align: center;
+    
+}
+.tittl{
+    padding: 27px;
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
 }
