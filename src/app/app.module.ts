@@ -24,6 +24,10 @@ import {DropdownModule} from 'primeng/dropdown';
 import { HttpClientModule } from '@angular/common/http';
 import { AddCandidateComponent } from './registration/add-candidate/add-candidate.component';
 import { CandidateListComponent } from './registration/candidate-list/candidate-list.component';
+import { EtherumBalanceComponent } from './blockchain/etherum-balance/etherum-balance.component';
+import { EtherumPayComponent } from './blockchain/etherum-pay/etherum-pay.component';
+import {TableModule} from 'primeng/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +37,9 @@ import { CandidateListComponent } from './registration/candidate-list/candidate-
     MainComponent,
     AddVoterComponent,
     AddCandidateComponent,
-    CandidateListComponent
+    CandidateListComponent,
+    EtherumBalanceComponent,
+    EtherumPayComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,8 @@ import { CandidateListComponent } from './registration/candidate-list/candidate-
     PanelMenuModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'block-chain'),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    TableModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

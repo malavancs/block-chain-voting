@@ -16,7 +16,12 @@ html,body {
 }
 #addvotercard .ui-menu {
     width: 100% !important;
-    background: darkslategrey;
+    padding: 29px;
+    height: 712px !important;
+    background-image: linear-gradient(2deg,#5c2774, #335cc5, #637ffd);
+}
+body .ui-menu .ui-menuitem-link:hover {
+    background-color: #ff0000 !important;
 }
 @font-face {
     font-family: 'YourFontName'; /*a name to be used later*/

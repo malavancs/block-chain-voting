@@ -1,0 +1,38 @@
+<div class="ui-g-12 ui-g-nopad">
+  <div class="card">
+    <p class="title1"> Etherum Balance for voting</p>
+    <div class="container">
+
+      <div class="ui-g ui-fluid">
+
+        <div class="ui-g-8 ui-md-8">
+          <div>
+            <p-dropdown [options]="electionList" [(ngModel)]="selectedElection"></p-dropdown>
+          </div>
+        </div>
+        <div class="ui-g-12">
+
+       
+          <p-table [value]="cars">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>S no</th>
+                    <th>Etherum Address</th>
+                    <th>Transaction</th>
+                    
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-car>
+                <tr>
+                    <td>{{car.sno}}</td>
+                    <td>{{car.etherum_address}}</td>
+                    <td><button pButton type="button" label="Delete him" class="ui-button-raised ui-button-secondary"></button></td>
+                    
+                </tr>
+            </ng-template>
+        </p-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
