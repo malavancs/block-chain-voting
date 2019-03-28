@@ -7,6 +7,7 @@ import { AddCandidateComponent } from './registration/add-candidate/add-candidat
 import { CandidateListComponent } from './registration/candidate-list/candidate-list.component';
 import { EtherumBalanceComponent } from './blockchain/etherum-balance/etherum-balance.component';
 import { EtherumPayComponent } from './blockchain/etherum-pay/etherum-pay.component';
+import { VotingListComponent } from './election-authority/voting-list/voting-list.component';
 const routes: Routes = [
 
   { path: 'login', component: LoginComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'addcandidate', component: AddCandidateComponent},
   { path: 'candidatelist', component: CandidateListComponent},
   { path: 'etherum-balance', component: EtherumBalanceComponent},
-  { path: 'pay-etherum', component: EtherumPayComponent}
+  { path: 'pay-etherum', component: EtherumPayComponent},
+  { path: 'voting-list', component: VotingListComponent}
 ];
 
 @NgModule({
