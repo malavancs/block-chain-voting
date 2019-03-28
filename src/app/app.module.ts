@@ -27,7 +27,9 @@ import { CandidateListComponent } from './registration/candidate-list/candidate-
 import { EtherumBalanceComponent } from './blockchain/etherum-balance/etherum-balance.component';
 import { EtherumPayComponent } from './blockchain/etherum-pay/etherum-pay.component';
 import {TableModule} from 'primeng/table';
-
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {BlockUIModule} from 'primeng/blockui';
+import { VotingListComponent } from './election-authority/voting-list/voting-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,8 @@ import {TableModule} from 'primeng/table';
     AddCandidateComponent,
     CandidateListComponent,
     EtherumBalanceComponent,
-    EtherumPayComponent
+    EtherumPayComponent,
+    VotingListComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,9 @@ import {TableModule} from 'primeng/table';
     CardModule,
     DropdownModule,
     MenuModule,
+    ProgressSpinnerModule,
     ButtonModule,
+    BlockUIModule,
     InputTextModule,
     PanelMenuModule,
     FormsModule,

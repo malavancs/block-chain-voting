@@ -22,7 +22,7 @@ export class SideNavBarComponent implements OnInit {
         { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: '/addvoter' },
         { label: 'Balance List', icon: 'pi pi-fw pi-plus', routerLink: '/etherum-balance' },
         { label: 'Pay Etherum', icon: 'pi pi-fw pi-plus', routerLink: '/pay-etherum' },
-        { label: 'Candidate list', icon: 'pi pi-fw pi-list', routerLink: '/candidatelist' },
+        { label: 'Election List', icon: 'pi pi-fw pi-list', routerLink: '/voting-list' },
         { label: 'View Results', icon: 'pi pi-fw pi-plus', routerLink: '/viewresults' },
         { label: 'Signed Out', icon: 'pi pi-fw pi-sign-out', routerLink: '/', command: e => this.logout() }
       ];
