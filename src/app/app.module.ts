@@ -30,6 +30,8 @@ import {TableModule} from 'primeng/table';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {BlockUIModule} from 'primeng/blockui';
 import { VotingListComponent } from './election-authority/voting-list/voting-list.component';
+import { VoteNowComponent } from './vote/vote-now/vote-now.component';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { VotingListComponent } from './election-authority/voting-list/voting-lis
     CandidateListComponent,
     EtherumBalanceComponent,
     EtherumPayComponent,
-    VotingListComponent
+    VotingListComponent,
+    VoteNowComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { VotingListComponent } from './election-authority/voting-list/voting-lis
     BrowserAnimationsModule,
     AppRoutingModule,
     CardModule,
+    InputTextareaModule,
     DropdownModule,
     MenuModule,
     ProgressSpinnerModule,

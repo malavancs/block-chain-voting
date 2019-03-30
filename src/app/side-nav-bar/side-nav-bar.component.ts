@@ -16,8 +16,7 @@ export class SideNavBarComponent implements OnInit {
   router: Router;
   ngOnInit() {
     console.log("Voter",this.voterService.user_id);
-    if (this.voterService.user_id === '7pID2YEqrNY1GkVEmeepnamA9Cg1' || true) {
-      
+    if (this.voterService.user_id === '7pID2YEqrNY1GkVEmeepnamA9Cg1' || false) {
       this.items = [
         { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: '/addvoter' },
         { label: 'Balance List', icon: 'pi pi-fw pi-plus', routerLink: '/etherum-balance' },

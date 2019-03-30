@@ -1,0 +1,109 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    
+    margin-left: 1.5%;
+    height: 100%;
+    margin-top: 2.5%;
+    padding-bottom: 40px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.title1{
+    padding: 28px;
+    font-size: medium;
+    font-weight: 400;
+}
+.title{
+    padding-top: 28px;
+    padding-left: 23px;
+    font-size: medium;
+    font-weight: bold;
+}
+.electino{
+    padding-bottom: 10px;
+}
+.img-candi {
+    text-align: center;
+    border: 1px solid grey;
+
+}
+.pic {
+    width: 74%;
+    border-radius: 50%;
+    width: 100%;
+    height: 287px;
+    text-align: center;
+}
+.description{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.desc{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-size: 14px;
+}
+.single_card_candidate{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 200px !important;
+    margin-left: 1.5%;
+    height: 200px;
+    margin-top: 2.5%;
+    padding-bottom: 40px;
+    margin: 20px;
+    padding: 20px;
+}
+.candidate-name{
+    font-size: x-large;
+}
+.candidate-no{
+   
+    margin-top: 7px;
+}
+.candidate-description{
+    margin-top: 15px;
+    font-size: 15px;
+}
+.selectedCandidate{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 200px !important;
+    margin-left: 1.5%;
+    height: 200px;
+    margin-top: 2.5%;
+    padding-bottom: 40px;
+    margin: 20px;
+    padding: 20px;
+    background: blue;
+    color: white !important;
+    border-radius: 4px;
+}
+.public-key{
+    padding-left: 0px;
+}
+.margin-bottom1{
+    margin-bottom: 20px;
+}
+.ddi {
+    width: 206px;
+    height: 600px;
+    position: absolute;
+    left: 153px;
+    right: 0;
+    top: 453px;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    z-index: 2;
+}

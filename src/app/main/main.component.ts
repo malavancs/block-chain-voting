@@ -15,13 +15,18 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
-   this.authservice.user.subscribe(e => {
-     if (e) {
+    if (this.router.url === '/election/vote') {
+      console.log('malavan', this.router.url);
+    } else {
+      console.log('malavan', this.router.url);
 
-     } else {
-       this.Router.navigateByUrl('/login');
-     }
-   });
+      this.authservice.user.subscribe(e => {
+        if (e) {
+        } else {
+          
+        }
+      });
+    }
   }
   onActivate(event) {
     //
