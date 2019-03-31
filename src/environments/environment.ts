@@ -12,7 +12,7 @@ export const environment = {
     storageBucket: 'block-chain-94f3d.appspot.com',
     messagingSenderId: '615638146047'
   },
-  api_url : 'http://localhost:3000'
+  api_url : 'http://localhost:3000/api'
 };
 
 /*

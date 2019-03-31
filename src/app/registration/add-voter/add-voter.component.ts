@@ -15,23 +15,29 @@ export class AddVoterComponent implements OnInit {
   constructor(private voterService: VoterService) { }
 
   ngOnInit() {
-    this.electionList = [
-      {
-        label: 'Select an election to add',
-        value: null
-      },
-      {
-        label: '2019 Indian Election',
-        value: 'election_id'
-      }];
+    this.voterService.getElectionDetail().subscribe((resPonse: any) => {
+      const data = resPonse.json();
+      console.log('Status', data);
+
+      data.forEach(element => {
+        element.label = element.name;
+        element.value = element.election_id;
+      });
+      this.electionList = data;
+      this.selectedElection = this.electionList[0].value;
+    }, (err: any) => {
+      console.log('Malaavan', err);
+    });
+
   }
 
   sendEmail() {
     // TODO: Validation @Balaji Do this
     const payload = {
-      email: this.email,
-      firstname: this.firstname,
-      lastname: this.lastname
+      emailId: this.email,
+      firstName: this.firstname,
+      lastName: this.lastname,
+      election_id: this.selectedElection
     };
     this.voterService.addVoterToElection(payload).subscribe((res: any) => {
 

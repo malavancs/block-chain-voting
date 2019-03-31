@@ -32,6 +32,8 @@ import {BlockUIModule} from 'primeng/blockui';
 import { VotingListComponent } from './election-authority/voting-list/voting-list.component';
 import { VoteNowComponent } from './vote/vote-now/vote-now.component';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import { HttpModule } from '@angular/http';
+import {DynamicDialogModule} from 'primeng/dynamicdialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,8 +52,10 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    DynamicDialogModule,
     CardModule,
     InputTextareaModule,
     DropdownModule,

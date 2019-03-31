@@ -8,14 +8,14 @@
         <div class="ui-g-8 ui-md-8">
           <div>
             <div class="electino">Select election get Candidate list</div>
-            <p-dropdown [options]="electionList" [(ngModel)]="selectedElection"></p-dropdown>
+            <p-dropdown [options]="electionList" [(ngModel)]="selectedElection" (onChange)="getList($event)"></p-dropdown>
           </div>
         </div>
         <div class="ui-g-12">
 
           <div *ngFor="let i of a" class="ui-g-3 ui-g-nopad single-card">
             <div class="ui-g-12">
-              <img [src]="i.image_url" class="pic">
+              <img [src]="i.imageUrl" class="pic">
             </div>
             <div class="ui-g-12 ui-g-nopad">
               <p class="candi-name">{{i.name}}</p>

@@ -31,7 +31,7 @@
                     <span class="ui-inputgroup-addon">
                       <i class="fa fa-user"></i>
                     </span>
-                    <input type="email" pInputText placeholder="Name"  [(ngModel)]="email">
+                    <input type="email" pInputText placeholder="Name"  [(ngModel)]="name">
                   </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="description">Description</div>
                 <div class="ui-g-8 ui-md-8 ui-g-nopad">
                     <div class="ui-inputgroup">
-                        <textarea rows="20" cols="300" pInputTextarea autoResize="autoResize"></textarea>
+                        <textarea rows="20" cols="300"  pInputTextarea autoResize="autoResize" [(ngModel)]="description" ></textarea>
                     </div>
                   </div>
             </div>
@@ -52,7 +52,7 @@
               <div class="ui-g-12 ui-g-nopad"></div>
               <div class="ui-g-3 ui-md-3">
                   <div>
-                    <button pButton type="button" label="Add to election" class="ui-button-raised" (onClick)="addCandidate()"></button>
+                    <button pButton type="button" label="Add to election" class="ui-button-raised" (click)="addCandidate()"></button>
                   </div>
                 </div>
           </div>

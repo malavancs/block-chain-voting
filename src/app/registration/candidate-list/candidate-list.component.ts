@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VoterService } from '../../service/voter.service';
 
 @Component({
   selector: 'app-candidate-list',
@@ -8,34 +9,33 @@ import { Component, OnInit } from '@angular/core';
 export class CandidateListComponent implements OnInit {
   electionList: { label: string; value: string; }[];
   a: any[];
-  constructor() { }
+  selectedElection: any;
+  constructor(private voterService: VoterService) { }
 
   ngOnInit() {
-    this.a = [{
-      image_url: '/assets/images/candidate-pic.png',
-      name: 'Malvan',
-      description: 'Hi test'
-    },
-    {
-      image_url: '/assets/images/candidate-pic.png',
-      name: 'Balaji',
-      description: 'Hi test'
-    },
-    {
-      image_url: '/assets/images/candidate-pic.png',
-      name: 'Hariß',
-      description: 'Hi test'
-    }];
 
-    this.electionList = [
-      {
-        label: 'Select an election to add',
-        value: null
-      },
-      {
-        label: '2019 Indian Election',
-        value: 'election_id'
-      }];
+    this.voterService.getElectionDetail().subscribe((resPonse: any) => {
+      const data = resPonse.json();
+      console.log('Status', data);
+
+      data.forEach(element => {
+        element.label = element.name;
+        element.value = element.election_id;
+      });
+      this.electionList = data;
+
+    }, (err: any) => {
+      console.log('Malaavan', err);
+    });
+
+
+  }
+  getList(event) {
+    this.voterService.getCandidateListById(event.value).subscribe((res: any) => {
+      const json = res.json();
+      this.a = json.candidate_data;
+      console.log(json, 'val');
+    });
   }
 
 }

@@ -1,12 +1,12 @@
-<div class="ui-g-12 ui-g-nopad">
+<div *ngIf="doesAllowVoting" class="ui-g-12 ui-g-nopad">
   <div class="card ui-g-8">
 
     <div class="container">
-      <div class="ui-g ui-fluid">
+      <div class="ui-g ui-fluid" *ngIf="data && data.candidate_list">
         <div class="ui-g-12 ui-g-nopad" style="font-size: 30px;">{{data.election_name}}</div>
         <div class="ui-g-12 desc">{{data.election_description}}</div>
         <div *ngFor="let i of data.candidate_list; let ith = index">
-          <div class="single_card_candidate" (click)="console.log()" [ngClass]="{'single_card_candidate': !i.isSelected, 'selectedCandidate': i.isSelected}">
+          <div class="single_card_candidate" (click)="isMarked(i,ith)" [ngClass]="{'single_card_candidate': !i.isSelected, 'selectedCandidate': i.isSelected}">
             <div class="candidate-name">{{i.candidate_name}}</div>
             <div class="candidate-no">#{{ith+1}}</div>
             <div class="candidate-description">{{i.candidate_description}}</div>
@@ -23,19 +23,40 @@
         <div class="ui-g-12 ui-md-12">
           <div class="ui-g-nopad" style="font-size: 23px;">Select your identity</div>
           <div class="ui-g-12 public-key">Public key</div>
-          <textarea class="ui-g-12"  pInputTextarea disabled [(ngModel)]="public_address"></textarea>
+          <textarea class="ui-g-12" pInputTextarea disabled [(ngModel)]="public_address"></textarea>
           <div class="ui-g-12 public-key">Private key</div>
           <textarea class="ui-g-12 margin-bottom1" style="height: 339px;" pInputTextarea [(ngModel)]="private_address"></textarea>
 
-          <button pButton type="button" label="Vote now" (click)="voter_now()" class="ui-button-raised ui-button-success ui-g-6 ui-g-nopad"></button>
+          <button pButton type="button" [disabled]="(this.data.election_isStarted && (!this.data.election_isEnd) ) === 0" label="Vote now"
+            (click)="voter_now()" class="ui-button-raised ui-button-success ui-g-6 ui-g-nopad"></button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="ddi">
-  
-    <p-progressSpinner *ngIf="show" [style]="{width: '50px', height: '50px'}" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
-  </div>
-  <p-blockUI [blocked]="show"></p-blockUI>
-  
+
+  <p-progressSpinner *ngIf="show" [style]="{width: '50px', height: '50px'}" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
+</div>
+<p-blockUI [blocked]="show"></p-blockUI>
+
+<div *ngIf="!doesAllowVoting">
+  <div class="ui-g-12"> Election Result</div>
+    <p-table [value]="result">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Count</th>
+               
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-car>
+            <tr>
+                <td>{{car.id}}</td>
+                <td>{{car.name}}</td>
+                <td>{{car.voteCount}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

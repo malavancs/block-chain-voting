@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
       if (this.user) {
         this.show = false;
         this.VoterService.setUserId(value.user.uid);
-        console.log(value.user);
+        console.log(value.user,"Malavan");
         this.router.navigateByUrl('/addvoter');
       }
     });
